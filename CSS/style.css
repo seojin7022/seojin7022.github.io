@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .hidden {
   display: none;
 }
@@ -18,7 +23,6 @@
 #greeting,
 #clock {
   color: white;
-  text-shadow: 1px -1px 1px black;
 }
 
 #clock {
@@ -84,45 +88,94 @@
 }
 
 #todo-form input {
-  width: 15%;
+  transition-duration: 100ms;
+  width: 20%;
   height: 30px;
-  font-size: large;
+  font-size: x-large;
   text-align: center;
+  background: none;
+  border: none;
+  color: white;
+}
+
+#todo-form input:focus {
+  font-size: xx-large;
+  outline: none;
 }
 
 #todo-list {
-  color: Black;
+  color: white;
   position: absolute;
-  width: 80%;
-  height: 100%;
-  z-index: -10;
+  top: 630px;
+  width: 300px;
+  height: 225px;
+  z-index: 0;
+  overflow: scroll;
+  background: rgb(31, 31, 31);
 }
 
 #todo-list li {
   position: relative;
+  width: 50%;
   left: 50px;
-  top: 50px;
 }
 
 #todo-list li span {
-  font-size: 2em;
-  font-weight: 600;
+  font-size: x-large;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: square;
 }
 
 #todo-list li button {
-  width: 2em;
-  height: 2em;
-  color: red;
-  background-color: white;
+  transition-duration: 100ms;
+  width: 20%;
+  color: rgb(255, 72, 72);
+  background: none;
   border: none;
   position: relative;
-  left: 4px;
-  bottom: 5px;
-  border-radius: 100%;
-  font-size: large;
+  font-size: x-large;
   font-weight: 600;
+}
+
+#todo-list li button:hover {
+  font-size: xx-large;
+}
+
+#todo-title {
+  color: white;
+  background: rgba(24, 24, 24, 1);
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  top: 580px;
 }
 
 #weather {
   color: white;
+}
+
+::placeholder {
+  color: white;
+  text-decoration-line: underline;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(158, 158, 158);
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
 }
