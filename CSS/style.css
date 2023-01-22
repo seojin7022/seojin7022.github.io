@@ -124,7 +124,7 @@ body {
 
 #todo-list {
   color: white;
-  position: absolute;
+  position: fixed;
   top: 630px;
   width: 300px;
   height: 225px;
