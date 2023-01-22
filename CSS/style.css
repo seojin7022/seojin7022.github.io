@@ -48,8 +48,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 800px;
+  position: fixed;
+  top: 90vh;
+  left: 40vw;
   color: white;
   font-size: 20px;
 }
@@ -63,8 +64,8 @@ body {
 }
 
 #login-input {
-  transition-duration: 100ms;
-  width: 30%;
+  transition-duration: 50ms;
+  width: 35%;
   height: 80px;
   font-size: 3em;
   text-align: center;
@@ -75,7 +76,7 @@ body {
 }
 
 #login-input:focus {
-  font-size: 4em;
+  font-size: 3.5em;
   outline: none;
 }
 
@@ -106,11 +107,21 @@ body {
   top: 500px;
 }
 
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+	-webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 #todo-form input {
-  transition-duration: 100ms;
-  width: 20%;
-  height: 30px;
-  font-size: x-large;
+  transition-duration: 50ms;
+  width: 25%;
+  height: 39px;
+  font-size: 2em;
   text-align: center;
   background: none;
   border: none;
@@ -118,16 +129,16 @@ body {
 }
 
 #todo-form input:focus {
-  font-size: xx-large;
+  font-size: 2.5em;
   outline: none;
 }
 
 #todo-list {
   color: white;
   position: fixed;
-  top: 630px;
-  width: 300px;
-  height: 225px;
+  top: 70vh;
+  width: 20vw;
+  height: 30vh;
   z-index: 0;
   overflow: scroll;
   background: rgb(31, 31, 31);
@@ -167,10 +178,10 @@ ul {
   color: white;
   background: rgba(24, 24, 24, 1);
   text-align: center;
-  width: 300px;
-  height: 50px;
-  position: absolute;
-  top: 580px;
+  width: 20vw;
+  height: 8vh;
+  position: fixed;
+  top: 62vh;
 }
 
 #weather {

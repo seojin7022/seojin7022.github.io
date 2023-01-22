@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Momentum</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
     <form id="login-form" class="hidden">
       <input
         id="login-input"
@@ -15,19 +15,24 @@
         placeholder="What is your name?"
         maxlength="15"
         type="text"
-      >
-      <input type="submit" value="Log In" id="login-submit">
+        autocomplete="off"
+      />
+      <input type="submit" value="Log In" id="login-submit" />
     </form>
     <h2 id="clock">00:00</h2>
     <h1 class="hidden" id="greeting"></h1>
     <form id="todo-form">
-      <input required type="text" placeholder="Write a To Do and Press">
+      <input
+        required
+        type="text"
+        placeholder="Write a To Do and Press"
+        autocomplete="off"
+      />
     </form>
 
     <h2 id="todo-title">TO-DO LIST</h2>
     <ul id="todo-list"></ul>
 
-    
     <div id="quote">
       <span></span>
       <span></span>
@@ -42,5 +47,5 @@
     <script src="JS/background.js"></script>
     <script src="JS/todo.js"></script>
     <script src="JS/weather.js"></script>
-</body>
+  </body>
 </html>
