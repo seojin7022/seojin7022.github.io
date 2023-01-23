@@ -15,7 +15,13 @@ const handleSubmit = (event) => {
   event.preventDefault();
   if (validURL(event.target[0].value)) 
   {
-    window.location.replace(event.target[0].value);
+    if (event.target[0].value.startsWith("https://")) {
+      window.location.replace(event.target[0].value);
+    }
+    else {
+      window.location.replace("https://" + event.target[0].value);
+    }
+    
   }
 
   else {
