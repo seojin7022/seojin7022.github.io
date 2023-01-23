@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Momentum</title>
+    <title>New Tab</title>
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="CSS/search.css" />
+    <link rel="stylesheet" href="CSS/header.css" />
 
     <link
       rel="stylesheet"
@@ -18,6 +19,23 @@
   </head>
   <body>
     <script src="JS/background.js"></script>
+    <header>
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+        id="menu-button"
+        style="fill: white"
+      >
+        <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+        />
+      </svg>
+    </header>
     <form id="login-form" class="hidden">
       <input
         id="login-input"
@@ -32,7 +50,13 @@
     <h2 id="clock">00:00</h2>
     <h1 class="hidden" id="greeting"></h1>
     <form id="search-form">
-      <input type="text" required placeholder="Search" id="search-input" />
+      <input
+        type="text"
+        required
+        placeholder="Search"
+        id="search-input"
+        autocomplete="off"
+      />
       <div id="search-button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -58,10 +82,7 @@
       <span></span>
       <span></span>
     </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+
     <script src="JS/greeting.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/quotes.js"></script>

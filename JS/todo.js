@@ -13,6 +13,8 @@ function deleteToDo(event) {
   const li = event.target.parentElement;
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   li.remove();
+  const hr = toDoList.querySelector(`#${"id" + li.id}`);
+  hr.remove();
   saveToDos();
 }
 
@@ -21,12 +23,16 @@ function paintToDo(newTodo) {
   li.id = newTodo.id;
   const span = document.createElement("span");
   const button = document.createElement("button");
+  const hr = document.createElement("hr");
+  hr.id = "id" + newTodo.id;
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
   li.appendChild(span);
   li.appendChild(button);
+
   span.innerText = newTodo.text;
   toDoList.appendChild(li);
+  toDoList.appendChild(hr);
   saveToDos();
 }
 

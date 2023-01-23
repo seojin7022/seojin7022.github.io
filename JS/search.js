@@ -1,5 +1,5 @@
 const searchForm = document.querySelector("#search-form");
-const input = document.createElement("input");
+const searchInput = document.querySelector("#search-input");
 const handleSubmit = (event) => {
   event.preventDefault();
   window.location.replace(
@@ -7,4 +7,14 @@ const handleSubmit = (event) => {
   );
 };
 
+const handleFocus = (event) => {
+  searchForm.classList.add("search-expand");
+};
+
+const handleFocusOut = (event) => {
+  searchForm.classList.remove("search-expand");
+};
+
 searchForm.addEventListener("submit", handleSubmit);
+searchInput.addEventListener("focus", handleFocus);
+searchInput.addEventListener("focusout", handleFocusOut);
