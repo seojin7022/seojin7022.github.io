@@ -1,35 +1,33 @@
 * {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.bgImage {
+  position: fixed;
+  top: 0;
+  z-index: -10000;
+  width: 100%;
+  height: 100%;
+}
+
+#greeting,
+#clock {
+  color: white;
 }
 
 @media only screen and (min-width: 601px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html,
-  body {
-    height: 100%;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .bgImage {
-    position: fixed;
-    top: 0;
-    z-index: -10000;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #greeting,
-  #clock {
-    color: white;
-  }
-  
+
   #clock {
     width: 100%;
     text-align: center;
@@ -59,48 +57,53 @@
     font-size: 20px;
   }
   
-  #login-form {
-    width: 100%;
-    height: 50%;
+  #login-form:not(.hidden) {
+    width: 25vw;
+    height: 20vh;
     text-align: center;
-    position: absolute;
-    top: 300px;
+    position: fixed;
+    top: 15vh;
+    left: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   #login-input {
-    transition-duration: 50ms;
-    width: 35%;
-    height: 80px;
-    font-size: 3em;
+    transition-duration: 100ms;
+    width: 100%;
+    height: 70%;
+    font-size: 2vw;
     text-align: center;
     background: none;
     outline: none;
     border: none;
     color: white;
-    text-shadow: #000 1px 0px 0px;
+    text-shadow: #000 0.01px 0.01px 10px;
   }
   
   #login-input:focus {
-    font-size: 3.5em;
+    font-size: 2.5vw;
     outline: none;
   }
   
   #login-submit {
-    transition-duration: 200ms;
-    width: 15%;
-    height: 50px;
-    display: block;
+    transition: 100ms;
+    width: 50%;
+    height: 25%;
     position: relative;
-    left: 42.5%;
+    left: 25%;
     top: 10px;
     border-radius: 50px;
     border: none;
     color: white;
-    font-size: x-large;
+    font-size: 1vw;
     background: rgb(31, 31, 31);
+    cursor: pointer;
   }
   
   #login-submit:hover {
+    transition: 100ms;
     background: rgb(51, 51, 51);
   }
   
@@ -111,40 +114,31 @@
     position: fixed;
     top: 60vh;
   }
-  
-  input:autofill,
-  input:autofill:hover,
-  input:autofill:focus,
-  input:autofill:active {
-    -webkit-text-fill-color: #000;
-      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-      box-shadow: 0 0 0px 1000px #fff inset;
-      transition: background-color 5000s ease-in-out 0s;
-  }
+
   
   #todo-form input {
     transition-duration: 50ms;
     width: 25%;
-    height: 39px;
-    font-size: 2em;
+    height: auto;
+    font-size: 2vw;
     text-align: center;
     background: none;
     border: none;
     color: white;
-    text-shadow: #000 1px 1px 10px;
+    text-shadow: #000 1px 1px 5px;
   }
   
   #todo-form input:focus {
-    font-size: 2.5em;
+    font-size: 2.25vw;
     outline: none;
   }
   
   #todo-list {
     color: white;
-    position: fixed;
-    top: 70vh;
-    width: 20vw;
-    height: 30vh;
+    position: relative;
+    top: 15%;
+    width: 100%;
+    height: 85%;
     z-index: 0;
     overflow: scroll;
     background: rgb(31, 31, 31);
@@ -180,17 +174,24 @@
   #todo-list li button:hover {
     font-size: 1.5em;
   }
+
+  .todo-container {
+    background: rgba(24, 24, 24, 1);
+    position: fixed;
+    top: 59vh;
+    width: 20vw;
+    height: 38vh;
+    z-index: 0;
+  }
   
   #todo-title {
     color: white;
-    background: rgba(24, 24, 24, 1);
+    background: none;
     text-align: center;
-    width: 20vw;
-    height: 8vh;
-    position: fixed;
-    top: 62vh;
+    font-size: 1.5vw;
+    position: relative;
+    top: 2vh;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    vertical-align: baseline;
   }
   
   #weather {
@@ -203,8 +204,8 @@
   }
   
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 1vh;
+    height: 1vw;
   }
   
   ::-webkit-scrollbar-track {
