@@ -13,7 +13,7 @@ body {
 }
 
 .bgImage {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: -10000;
   width: 100%;
@@ -27,10 +27,9 @@ body {
 
 #clock {
   width: 100%;
-  height: 100px;
   text-align: center;
-  position: absolute;
-  top: 100px;
+  position: fixed;
+  top: 5vh;
   font-size: 10em;
   z-index: -9999;
 }
@@ -73,6 +72,7 @@ body {
   outline: none;
   border: none;
   color: white;
+  text-shadow: #000 1px 0px 0px;
 }
 
 #login-input:focus {
@@ -103,8 +103,8 @@ body {
   width: 100%;
   height: 40%;
   text-align: center;
-  position: absolute;
-  top: 500px;
+  position: fixed;
+  top: 60vh;
 }
 
 input:autofill,
@@ -126,6 +126,7 @@ input:autofill:active {
   background: none;
   border: none;
   color: white;
+  text-shadow: #000 1px 1px 10px;
 }
 
 #todo-form input:focus {
@@ -182,6 +183,8 @@ ul {
   height: 8vh;
   position: fixed;
   top: 62vh;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  vertical-align: baseline;
 }
 
 #weather {
