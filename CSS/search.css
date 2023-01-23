@@ -1,49 +1,104 @@
-#search-form:not(.search-expand) {
-    transition: 100ms;
-    position: fixed;
-    top: 40vh;
-    left: 35vw;
-    width: 30vw;
-    height: 5vh;
+@media only screen and (max-width: 600px) {
+    #search-form:not(.search-expand) {
+        transition: 100ms;
+        position: fixed;
+        top: 30vh;
+        left: 20vw;
+        width: 60vw;
+        height: 5vh;
+    }
+    
+    #search-input {
+        position: relative;
+        width: 80%;
+        height: 100%;
+        border: none;
+        border-radius: 30px;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: large;
+    }
+    
+    #search-input:focus {
+        outline: none;
+    }
+    
+    .search-expand {
+        transition: 100ms;
+        position: fixed;
+        top: 30vh;
+        left: 15vw;
+        width: 70vw;
+        height: 5vh;
+    }
+    
+    
+    
+    #search-button {
+        position: relative;
+        width: 5%;
+        height: 100%;
+        left: 3%;
+        bottom: 100%;
+    }
+    
+    #search-button svg {
+        width: 80%;
+        height: 80%;
+        position: relative;
+        top: 10%;
+    }
 }
 
-#search-input {
-    position: relative;
-    width: 80%;
-    height: 100%;
-    border: none;
-    border-radius: 30px;
-    padding-left: 10%;
-    padding-right: 10%;
-    font-size: large;
+@media only screen and (min-width: 601px) {
+    #search-form:not(.search-expand) {
+        transition: 100ms;
+        position: fixed;
+        top: 40vh;
+        left: 35vw;
+        width: 30vw;
+        height: 5vh;
+    }
+    
+    #search-input {
+        position: relative;
+        width: 80%;
+        height: 100%;
+        border: none;
+        border-radius: 30px;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: large;
+    }
+    
+    #search-input:focus {
+        outline: none;
+    }
+    
+    .search-expand {
+        transition: 100ms;
+        position: fixed;
+        top: 40vh;
+        left: 32.5vw;
+        width: 35vw;
+        height: 5vh;
+    }
+    
+    
+    
+    #search-button {
+        position: relative;
+        width: 5%;
+        height: 100%;
+        left: 3%;
+        bottom: 100%;
+    }
+    
+    #search-button svg {
+        width: 80%;
+        height: 80%;
+        position: relative;
+        top: 10%;
+    }
 }
 
-#search-input:focus {
-    outline: none;
-}
-
-.search-expand {
-    transition: 100ms;
-    position: fixed;
-    top: 40vh;
-    left: 32.5vw;
-    width: 35vw;
-    height: 5vh;
-}
-
-
-
-#search-button {
-    position: relative;
-    width: 5%;
-    height: 100%;
-    left: 3%;
-    bottom: 100%;
-}
-
-#search-button svg {
-    width: 80%;
-    height: 80%;
-    position: relative;
-    top: 10%;
-}
