@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 @media only screen and (min-width: 601px) {
   * {
